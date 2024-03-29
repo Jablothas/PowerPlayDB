@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Record } from './logic/entity/record.entity';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'legendary-logbook';
+
+  // loadRecordList(): Record[] {
+  //   return [
+  //     new Record('Record 1'),
+  //     new Record('Record 2'),
+  //     new Record('Record 3'),
+  //   ];}
 }

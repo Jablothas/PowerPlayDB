@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+     background-color:#0a0a0a;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
