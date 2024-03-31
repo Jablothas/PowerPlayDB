@@ -2,20 +2,23 @@
     <title>Legendary Logbook</title>
 </head>
 <header>
-    <div class="header">
+    <div class="header" [ngClass]="{'moveBar': isMoveBarEnabled}">
         <div class="logo">
             <img src="/assets/images/logo-big.png">
             <h2>Legendary Logbook</h2>
         </div>
         <div class="buttons">
-            <input class="search-input" id="searchbar" type="text">
+            <input id="searchInput" type="text">
             <button id="addButton" class="button"></button>
-            <button id="hide-canceled-button" class="button"></button>
+            <button id="filterButton" class="button"></button>
             <button id="settingsButton" class="button"></button>
             <button id="logoutButton" class="button"></button>
         </div>
     </div>
+    <div class="status">
+    </div>
 </header>
 <body>
-
+    <button (click)="toggleMoveBar()" style="margin-top:100px">Toggle MoveBar Effect</button>
+<data-test></data-test>
 </body>

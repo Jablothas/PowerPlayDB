@@ -6,11 +6,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f1114;
+    background-color: #0a0a0a;
     padding: 10px 20px;
     z-index: 100;
-    border-bottom: #fff solid 2px;
+    overflow: hidden; /* Hide overflow to prevent the status bar from overflowing */
+    border-bottom: 0px solid #fff; /* Default white border */
 }
+
+.header.moveBar {
+    border-bottom: none; /* Remove static border when moveBar is enabled */
+}
+
+.header.moveBar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Align to the bottom border of the header */
+    left: 0;
+    width: 100%; /* Cover the entire width of the header */
+    height: 2px; /* Height of the status bar */
+    background-color: dodgerblue; /* Color of the status bar */
+    z-index: 101; /* Ensure the status bar is above the header */
+    animation: moveBar 1s linear infinite; /* Animation for the status bar */
+}
+
+@keyframes moveBar {
+    0% {
+        transform: translateX(-100%); /* Start position of the bar, all the way to the left */
+    }
+    50% {
+        transform: translateX(0%); /* Midpoint position of the bar, centered */
+    }
+    100% {
+        transform: translateX(100%); /* End position of the bar, all the way to the right */
+    }
+}
+
 
 .logo {
     display: flex;
@@ -50,22 +80,22 @@
 }
 
 .button#addButton:hover {
-background: limegreen url('/assets/images/buttons/add.png') no-repeat center;
+background: dodgerblue url('/assets/images/buttons/add.png') no-repeat center;
 }
 
 .button#addButton:disabled {
 background: grey url('/assets/images/buttons/add.png') no-repeat center;
 }
 
-.button#hide-canceled-button {
+.button#filterButton {
 width: 50px;
 height: 30px;
 background: #fff url('/assets/images/buttons/filtered.png') no-repeat center;
 padding: 2px 8px;
 }
 
-.button#hide-canceled-button:hover {
-background: limegreen url('/assets/images/buttons/filtered.png') no-repeat center;
+.button#filterButton:hover {
+background: dodgerblue url('/assets/images/buttons/filtered.png') no-repeat center;
 }
 
 .button#settingsButton {
@@ -76,7 +106,7 @@ padding: 2px 8px;
 }
 
 .button#settingsButton:hover {
-background: limegreen url('/assets/images/buttons/settings.png') no-repeat center;
+background: dodgerblue url('/assets/images/buttons/settings.png') no-repeat center;
 }
 
 .button#logoutButton {

@@ -1,21 +1,23 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Record } from './logic/entity/record.entity';
+import { HttpClientModule } from '@angular/common/http';
+import { DataTestComponent } from './view/data-test/data-test.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, DataTestComponent, HttpClientModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'legendary-logbook';
+  @ViewChild('searchInput') searchInput!: ElementRef;
+  title = 'legendary-logbook'; 
+  isMoveBarEnabled: boolean = false;
 
-  // loadRecordList(): Record[] {
-  //   return [
-  //     new Record('Record 1'),
-  //     new Record('Record 2'),
-  //     new Record('Record 3'),
-  //   ];}
+  toggleMoveBar() {
+    this.isMoveBarEnabled = !this.isMoveBarEnabled;
+  }
+  
 }
