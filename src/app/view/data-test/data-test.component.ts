@@ -18,14 +18,15 @@ export class DataTestComponent implements OnInit {
 
   }
 
-   ngOnInit(): void {
-    this.dataService.getRecords().subscribe(
-      (response) => {
+  ngOnInit(): void {
+    this.dataService.getRecords().subscribe({
+      next: (response) => {
         this.records = response;
       },
-      (error) => {
+      error: (error) => {
         console.error('Error fetching records:', error);
       }
-    );
+    });
   }
+  
 }
