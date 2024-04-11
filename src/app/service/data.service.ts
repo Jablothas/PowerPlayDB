@@ -10,7 +10,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getRecords(): Observable<any> {
-    return this.http.get<any>('https://jablo.dev/api/legendary-logbook/request.php?action=read');
+    return this.http.get<any>('https://jablo.dev/api/powerplaydb/request.php?action=read');
   }
 
 }

@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'legendary-logbook' title`, () => {
+  it(`should have the 'powerplaydb' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('legendary-logbook');
+    expect(app.title).toEqual('powerplaydb');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, legendary-logbook');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, powerplaydb');
   });
 });
