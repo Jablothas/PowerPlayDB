@@ -2,13 +2,13 @@
     <title>PowerPlayDB</title>
 </head>
 <header>
-    <div class="header" [ngClass]="{'moveBar': isMoveBarEnabled}">
+    <div class="header" [ngClass]="{'moveBar': loadingBarEnabled}">
         <div class="logo">
-            <img src="/assets/images/logo-big.png">
-            <h2>PowerPlayDB</h2>
+            <img class="logo-icon" src="/assets/images/concept/logo-icon.png">
+            <img class="logo-text" src="/assets/images/concept/logo-text.png">
         </div>
         <div class="buttons">
-            <input id="searchInput" type="text">
+            <input class ="search-input" id="searchInput" type="text">
             <button id="addButton" class="button"></button>
             <button id="filterButton" class="button"></button>
             <button id="settingsButton" class="button"></button>

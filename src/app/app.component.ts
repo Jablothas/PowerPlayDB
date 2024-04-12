@@ -14,10 +14,10 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   @ViewChild('searchInput') searchInput!: ElementRef;
   title = 'powerplaydb'; 
-  isMoveBarEnabled: boolean = false;
+  loadingBarEnabled: boolean = false;
 
   toggleMoveBar() {
-    this.isMoveBarEnabled = !this.isMoveBarEnabled;
+    this.loadingBarEnabled = !this.loadingBarEnabled;
   }
   
 }
