@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   @ViewChild('searchInput') searchInput!: ElementRef;
-  title = 'powerplaydb'; 
+  title = 'PowerPlayDB'; 
   loadingBarEnabled: boolean = false;
 
   toggleMoveBar() {
